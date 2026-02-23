@@ -129,7 +129,7 @@ const Home: React.FC = () => {
                                 <motion.div animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 0] }} transition={{ duration: 10, repeat: Infinity }} className="absolute inset-0 bg-blue-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-60" />
                                 <motion.div animate={{ scale: [1.1, 1, 1.1], rotate: [0, -90, 0] }} transition={{ duration: 12, repeat: Infinity }} className="absolute inset-0 bg-indigo-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-60" />
                                 <motion.img
-                                    src="src/react.png"
+                                    src="react.png"
                                     alt="React Logo"
                                     className="w-56 h-56 md:w-80 md:h-80 object-contain z-10 drop-shadow-2xl"
                                     animate={{ y: [0, -20, 0], rotate: 360 }}
