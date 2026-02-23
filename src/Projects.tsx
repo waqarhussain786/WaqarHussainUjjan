@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Define the structure for our project data
 interface Project {
@@ -9,6 +10,11 @@ interface Project {
   image: string;
   link: string;
 }
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 }
+};
 
 const Projects: React.FC = () => {
   const projectData: Project[] = [
@@ -79,9 +85,13 @@ const Projects: React.FC = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData.map((project) => (
-            <div 
+            <motion.div 
               key={project.id} 
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
@@ -119,7 +129,7 @@ const Projects: React.FC = () => {
                   </svg>
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
