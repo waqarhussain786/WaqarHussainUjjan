@@ -20,18 +20,18 @@ const Home: React.FC = () => {
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
-        visible: { 
-            opacity: 1, 
-            transition: { staggerChildren: 0.2, delayChildren: 0.3 } 
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2, delayChildren: 0.3 }
         }
     };
 
     const itemVariants: Variants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
-            transition: { duration: 0.6, ease: "easeOut" } 
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" }
         }
     };
 
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
                     >
                         <div className="relative flex flex-col items-center">
                             {/* Brand Name / Initial */}
-                            <motion.span 
+                            <motion.span
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 className="text-xl font-light tracking-[0.4em] uppercase mb-8"
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
 
                             {/* Progress Bar Container */}
                             <div className="h-[2px] w-48 bg-gray-800 rounded-full overflow-hidden">
-                                <motion.div 
+                                <motion.div
                                     initial={{ width: 0 }}
                                     animate={{ width: "100%" }}
                                     transition={{ duration: 1.3, ease: "easeInOut" }}
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
                             </div>
 
                             {/* Percentage Indicator */}
-                            <motion.span 
+                            <motion.span
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 0.5 }}
                                 className="mt-4 text-xs font-mono"
@@ -113,13 +113,13 @@ const Home: React.FC = () => {
                                 <motion.div animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 0] }} transition={{ duration: 10, repeat: Infinity }} className="absolute inset-0 bg-blue-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-60" />
                                 <motion.div animate={{ scale: [1.1, 1, 1.1], rotate: [0, -90, 0] }} transition={{ duration: 12, repeat: Infinity }} className="absolute inset-0 bg-indigo-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-60" />
                                 <motion.img
-                                    src="src/assets/react.svg"
+                                    src="src/assets/react.png"
                                     alt="React Logo"
                                     className="w-56 h-56 md:w-80 md:h-80 object-contain z-10 drop-shadow-2xl"
                                     animate={{ y: [0, -20, 0], rotate: 360 }}
-                                    transition={{ 
+                                    transition={{
                                         y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                                        rotate: { duration: 40, repeat: Infinity, ease: "linear" } 
+                                        rotate: { duration: 40, repeat: Infinity, ease: "linear" }
                                     }}
                                 />
                             </div>
