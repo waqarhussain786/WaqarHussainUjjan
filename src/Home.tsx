@@ -91,7 +91,7 @@ const Home: React.FC = () => {
                         <motion.div className="md:w-1/2 text-center md:text-left space-y-8 z-10" variants={itemVariants}>
                             <div className="space-y-4">
                                 <motion.h1 className="text-4xl md:text-7xl font-extrabold text-gray-900 leading-tight">
-                                    Hi, I'm <span className="text-blue-600">Waqar Hussain</span><br />
+                                    Hi, I'm <span className="text-blue-600">Waqar Hussain Ujjan</span><br />
                                     <span className="text-slate-700">A Full Stack Developer</span>
                                 </motion.h1>
                             </div>
@@ -99,10 +99,26 @@ const Home: React.FC = () => {
                                 I build high-performance, responsive web applications using React, TypeScript, and Tailwind CSS. Let's turn your ideas into reality.
                             </motion.p>
                             <motion.div className="flex flex-col sm:flex-row justify-center md:justify-start gap-5 pt-4">
-                                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => {
+                                        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                    className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                                >
                                     View My Work
                                 </motion.button>
-                                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition-all">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => {
+                                        // Replace the URL below with your actual Dropbox link
+                                        // Ensure it ends with ?dl=1 for a direct download
+                                        window.open('https://www.dropbox.com/s/your-file-id/cv.pdf?dl=1', '_blank');
+                                    }}
+                                    className="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition-all"
+                                >
                                     Download CV
                                 </motion.button>
                             </motion.div>
