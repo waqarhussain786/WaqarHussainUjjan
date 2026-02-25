@@ -1,5 +1,6 @@
 import About from './About'
 import './App.css'
+import ProjectList from './components/ProjectList'
 import Contact from './Contact'
 import Footer from './Footer'
 import HireMe from './HireMe'
@@ -18,6 +19,7 @@ function App() {
       <Contact />
       <HireMe />
       <Footer />
+      <ProjectList />
     </>
   )
 }
